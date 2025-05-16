@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elementos</title>
+    <style>
+    /*PSEUDO ELEMENTOS
+    :: São representados por ::
+    */
+    code {
+        background-color: lightgray;
+    }
+
+    /*Pegando apenas as primeiras letras para edição*/
+    p::first-letter {
+        color: red;
+        background-color: lightgreen;
+    }
+    h1::first-letter {
+        color: blue;
+        border: 1px solid black;
+    }
+    /*
+    Se aplicar ele sozinho, será aplicado em todos os elementos:
+    ::first-letter {
+        color: blue;
+        border: 1px solid black;
+    }
+    */
+    </style>
+
+</head>
+<body>
+    <h1>Pseudo Elementos</h1>
+    <p>Usado para adicionar elementos extras na página, sem a necessidade de declará-lo no HTML, ou para selecionar uma parte de algum elemento.</p>
+    <p>Identificado por <code>::palavra-chave</code></p>
+
+    <h2>Pseudo-elemento - <code>::first-letter</code></h2>
+
+    <p>Seleciona a primeira letra da primeira linha.</p>
+    
+    <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iusto repellat consectetur nulla rem fuga quisquam quia sed illo, adipisci, enim nisi rerum excepturi, assumenda aperiam porro culpa commodi distinctio!</span><span>Fugiat officiis sit eaque facere eius error est laudantium quas exercitationem deleniti, ullam laborum quod iste maiores reiciendis delectus deserunt eum porro consequatur? Totam, sapiente aut vero eaque quas nulla?</span><span>Alias voluptatibus non, fugiat mollitia optio, quisquam praesentium adipisci distinctio molestiae ut sequi. Laboriosam magnam minus cum vel, iusto maxime repellendus nam? Accusamus, nemo minima incidunt dolor temporibus doloribus quidem?</span></p>
+    <p>Propriedades disponíveis:</p>
+    <ul>
+        <li><code>color</code></li>
+        <li><code>background</code></li>
+        <li><code>margin</code></li>
+        <li><code>padding</code></li>
+        <li><code>border</code></li>
+        <li><code>font</code></li>
+        <li>Propriedades de texto</li>
+    </ul>
+    
+</body>
+</html>

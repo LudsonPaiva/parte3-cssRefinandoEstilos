@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elementos</title>
+    <style>
+    /*PSEUDO ELEMENTOS
+    :: São representados por ::
+    */
+    code {
+        background-color: lightgray;
+    }
+
+    input::placeholder {
+        color: lightcoral;
+        text-transform: uppercase;
+    }
+
+    </style>
+
+</head>
+<body>
+    <h1>Pseudo Elementos</h1>
+    <p>Usado para adicionar elementos extras na página, sem a necessidade de declará-lo no HTML, ou para selecionar uma parte de algum elemento.</p>
+    <p>Identificado por <code>::palavra-chave</code></p>
+
+    <h2>Pseudo-elemento - <code>::placeholder</code></h2>
+    
+    <p>Um placeholder é uma dica para ajudar no preenchimento de algum campo do formulário.</p>
+    
+    <p>Propriedades aceitas:</p>
+    </details>
+    <ul>
+        <li>color</li>
+        <li>font</li>
+        <li>backgound</li>
+        <li>text</li>
+    </ul>
+
+    <hr>
+    <p>Exemplo:</p>
+    <label for="nome">Nome</label>
+    <input
+        name="nome"
+        type="text"
+        placeholder="Ex: Fulano de tal"
+    >
+
+    <label for="senha">Senha</label>
+    <input
+        name="senha"
+        type="password"
+        placeholder="Mínimo de 10 caracteres"
+    >
+    
+</body>
+</html>
