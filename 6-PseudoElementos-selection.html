@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elementos</title>
+    <style>
+    /*PSEUDO ELEMENTOS
+    :: São representados por ::
+    */
+    code {
+        background-color: lightgray;
+    }
+
+    ::selection {
+        background-color: palevioletred;
+    }
+
+    .exemplo::selection {
+        background-color: aquamarine;
+        color: red;
+    }
+    </style>
+
+</head>
+<body>
+    <h1>Pseudo Elementos</h1>
+    <p>Usado para adicionar elementos extras na página, sem a necessidade de declará-lo no HTML, ou para selecionar uma parte de algum elemento.</p>
+    <p>Identificado por <code>::palavra-chave</code></p>
+
+    <h2>Pseudo-elemento - <code>::selection</code></h2>
+    
+    <p>Permite personalizar a seleção de textos no navegador.</p>
+    
+    <p>Propriedades aceitas:</p>
+    </details>
+    <ul>
+        <li>color</li>
+        <li>backgound</li>
+        <li>text</li>
+    </ul>
+
+    <hr>
+    <p class="exemplo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam alias sed inventore molestias eum necessitatibus sit blanditiis vero, sequi reiciendis dolorem, eos id libero dolor autem facere nam recusandae similique!</p>
+    <p class="exemplo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam alias sed inventore molestias eum necessitatibus sit blanditiis vero, sequi reiciendis dolorem, eos id libero dolor autem facere nam recusandae similique!</p>
+
+    
+</body>
+</html>

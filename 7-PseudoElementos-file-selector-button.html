@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elementos</title>
+    <style>
+    /*PSEUDO ELEMENTOS
+    :: São representados por ::
+    */
+    code {
+        background-color: lightgray;
+    }
+
+    input::file-selector-button {
+        border: 2px solid purple;
+        background-color: lightblue;
+        color: blue;
+        padding: 12px;
+        border-radius: 4px;
+    }
+    </style>
+
+</head>
+<body>
+    <h1>Pseudo Elementos</h1>
+    <p>Usado para adicionar elementos extras na página, sem a necessidade de declará-lo no HTML, ou para selecionar uma parte de algum elemento.</p>
+    <p>Identificado por <code>::palavra-chave</code></p>
+
+    <h2>Pseudo-elemento - <code>::file-selector button</code></h2>
+    
+    <p>Permite estilizar o botão de imput tipo file.</p>
+    
+    <form action="">
+        <label for="fileUpload">Upload de arquivos</label>
+        <input name="fileUpload" type="file">
+    </form>
+
+</body>
+</html>

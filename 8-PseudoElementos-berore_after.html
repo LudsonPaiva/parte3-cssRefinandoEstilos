@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elementos</title>
+    <style>
+    /*PSEUDO ELEMENTOS
+    :: São representados por ::
+    */
+    code {
+        background-color: lightgray;
+    }
+
+    p::before{
+        content: "⧪";
+        color: red;
+        background-color: aquamarine;
+    }
+    p::after{
+        content: "🔰";
+        background-color: aquamarine;
+    }
+    .card-image {
+        width: 300px;
+        height: 300px;
+        border: 1px solid gray;
+        border-radius: 8px;
+        background-color: lightblue;
+        background: url(assets/image/ImagemDeFundo.jpg);
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card-image::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(transparent, rgb(255, 0, 140));
+    }
+    </style>
+
+</head>
+<body>
+    <h1>Pseudo Elementos</h1>
+    <p>Usado para adicionar elementos extras na página, sem a necessidade de declará-lo no HTML, ou para selecionar uma parte de algum elemento.</p>
+    <p>Identificado por <code>::palavra-chave</code></p>
+
+    <h2>Pseudo-elemento - <code>::before & after</code></h2>
+    
+    <p>before = cria um elemento dentro do seletor que estamos utilizando. Esse elemento será seu PRIMEIRO filho.</p>
+    <p>after = cria um elemento dentro do seletor que estamos utilizando. Esse elemento será seu ÚLTIMO filho.</p>
+
+    <P>Exemplo:</P>
+    <p>
+        <span>Exemplo 1</span>
+        <span>Exemplo 2</span>
+        <span>Exemplo 3</span>
+    </p>
+
+    <br><hr><br>
+
+    <div class="card-image"></div>
+
+</body>
+</html>
