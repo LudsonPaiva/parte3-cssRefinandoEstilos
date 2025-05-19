@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+        /*PSEUDDO CLASSES
+        Começam com ":"
+
+        hover: Explicam o que o elemento faz
+        active: Efeito quando o elemento é clicado
+        */
+
+        button {
+            background-color: palevioletred;
+            border: none;
+            padding: 8px 14px;
+            color: white;
+        }
+
+        button:hover {
+            background-color: palegreen;
+            color: darkgreen;
+            border: 1px solid darkgreen;
+            cursor: pointer;
+        }
+
+        button:active {
+            background-color: purple;
+            color: white;
+        }
+
+        a:active {
+            background-color: aqua;
+            color: blue;
+        }
+
+        h1:active {
+            background-color: greenyellow;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Pseudo-classes | :active</h1>
+
+    <button class="botao" type="button">Entrar em contato</button>
+    <br><br>
+    <a href="https://dio.me">Site Dio</a>
+    
+</body>
+</html>

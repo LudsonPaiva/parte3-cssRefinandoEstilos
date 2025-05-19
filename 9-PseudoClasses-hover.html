@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+        /*PSEUDDO CLASSES
+        Começam com ":"
+
+        hover: Explicam o que o elemento faz
+        */
+
+        button {
+            background-color: palevioletred;
+            border: none;
+            padding: 8px 14px;
+            color: white;
+        }
+
+        button:hover {
+            background-color: palegreen;
+            color: darkgreen;
+            border: 1px solid darkgreen;
+            cursor: pointer;
+        }
+
+        .container {
+            width: 100px;
+            height: 100px;
+            margin: 30px;
+            background-color: burlywood;
+        }
+
+        .container:hover {
+            background: url(assets/image/ImagemDeFundo.jpg);
+            background-size: cover;
+        }
+
+        .container button:hover {
+            background-color: purple;
+            color: yellow;
+            border-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Pseudo-classes | :hover</h1>
+
+    <button type="button">Entrar em contato</button>
+
+    <div class="container">
+        <button>Botão 2</button>
+    </div>
+</body>
+</html>

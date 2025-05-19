@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+        /*PSEUDDO CLASSES
+        Começam com ":"
+
+        :focus = elemento focado pelo navegador
+        :focus-within = aplica estilos a elementos correspondentes ao focus ou elementos descendentes do focado.
+        :focus-visible = Aplica quando navegarmos pelo tab, mas não aplica quando clicar
+        */
+
+        label, button {
+            display: block;
+            margin: 12px;
+            font-size: 1.5rem;
+        }
+
+        input, select {
+            font-size: 1.5rem;
+        }
+
+        input:focus {
+            outline: 2px dashed blue;
+        }
+
+        select:focus {
+            background-color: yellow;
+        }
+
+        button:focus-visible {
+            outline: 3px solid red;
+        }
+
+        /*Ex: Além da label destaca o texto*/
+        label:focus-within {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Pseudo-classes | :focus, :focus-within e :focus-visible</h1>
+
+    <form>
+        <p>Faça seu pedido! Escolha o sabor</p>
+        <label>Nome completo:<input type="nome"type="text">
+        </label>
+        <select name="sabor">
+            <option value="chocolate">Chocolate</option>
+            <option value="morango">Morango</option>
+            <option value="doce-de-leite">Doce de leite</option>
+            <option value="abacaxia">Abacaxia</option>
+        </select>
+        </label>
+        <button>Finalizar Pedido</button>
+    </form>
+</body>
+</html>
