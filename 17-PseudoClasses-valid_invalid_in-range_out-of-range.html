@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input[type=checkbox]:checked + label {
+            text-decoration: line-through;
+        }
+
+        form label, form button {
+            display: block;
+            margin-top: 12px;
+        }
+
+        input {
+            padding: 4px 14px;
+            margin-top: 8px;
+        }
+
+        form {
+            border: 1px solid grey;
+            border-radius: 4px;
+            width: 300px;
+            padding: 40px;
+            margin: auto;
+            background-color: rgb(247, 247, 247);
+        }
+
+        form h3 {
+            margin: 0;
+        }
+
+        /*
+        input:valid {
+            border: 1px solid green;
+            color: green;
+        }
+
+        input:invalid {
+            border: 1px solid red;
+            color: red;
+        }
+
+        input:invalid + span {
+            color: red;
+        }
+        */
+
+        input:in-range, input:valid {
+            border: 1px solid rgb(28, 168, 28);
+            color: rgb(28, 168, 28);
+        }
+
+        input:out-of-range, input:invalid {
+            border: 1px solid orangered;
+            color: orangered;
+        }
+        .error {
+            color: orangered;
+            font-size: 0.75rem;
+            display: none;
+            margin-top: 4px;
+        }
+        
+        /*pega o primeiro error após um valor estar inválido*/
+        input:invalid + .error {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Pseudo-classes</h1>
+
+    <div>
+        <input name="task-01" type="checkbox">
+        <label for="task-01">:invalid</label>
+    </div>
+    <div>
+        <input name="task-02" type="checkbox">
+        <label for="task-02">:valid</label>
+    </div>
+    <div>
+        <input name="task-03" type="checkbox">
+        <label for="task-03">:in-range</label>
+    </div>
+    <div>
+        <input name="task-04" type="checkbox">
+        <label for="task-04">:out-of-range</label>
+    </div>
+
+    <hr>
+    <form>
+        <h3>Faça sua compra:</h3>
+        <label for="email">Email:</label>
+        <input type="email" name="email"  required>
+        <span class="error">Valor inválido</span>
+
+        <label for="codigo-produto">Código Produto:</label>
+        <input 
+            type="number" 
+            name="codigo-produto" 
+            min="1000"
+        >
+        <span class="error">Valor inválido</span>
+
+        <label for="cupom">Cupom</label>
+        <input 
+            name="cupom" 
+            type="text" 
+            pattern="[a-z]+" 
+            placeholder="Apenas letras minusculas"
+        >
+        <span class="error">Valor inválido</span>
+
+        <label for="data-nascimento">Data de nascimento</label>
+        <input 
+            type="date"
+            name="data-nascimento"
+            min="1962-01-01"
+            max="2004-12-31"
+        >
+        <span class="error">Valor inválido</span>
+
+        <label for="Quantidade">Quantidade</label>
+        <input 
+            type="number"
+            name="quantidade"
+            min="3"
+            max="10"
+        >
+        <span class="error">Valor inválido</span>
+
+        <label>
+            <input type="checkbox" required>
+            <span>Li e aceito os termos de uso</span>
+        </label>
+        
+        <button type="submit">Comprar</button>
+    </form>
+</body>
+</html>

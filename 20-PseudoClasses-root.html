@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+
+        /*elementos estilizados na ordem desejada
+            :nth-child = seleciona um elemento filho na ordem que desejarmos estilizar
+        */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input[type=checkbox]:checked + label {
+            text-decoration: line-through;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        th, td {
+            padding: 1rem;
+        }
+
+        td + td,
+        th + td {
+            text-align: right;
+        }
+
+        /* Exemplos */
+
+        /*estilizar o terceiro parágrafo.*/
+        article p:nth-child(3) {
+            color: red;
+        }
+
+        article .exemplo:nth-child(1) {
+            color: blue;
+        }
+
+        /*não precisa indicar elemento*/
+        article :nth-child(2) {
+            color: green;
+        }
+
+        /*procura o primeiro filho que seja do tipo*/
+        article p:nth-of-type(1) {
+            background-color: lightsalmon;
+        }
+
+        li:nth-child(3) {
+            color: red;
+        }
+
+        #lista-1 li:nth-child(2) {
+            color: blue;
+        }
+
+        /*
+        even = par em inglês
+        odd = impar
+        */
+        li:nth-child(even) {
+            background-color: lightblue;
+        }
+
+        tr:nth-child(even) td {
+            background-color: lightblue;
+        }
+
+        /*a cada x itens*/
+        li:nth-child(3n) {
+            text-decoration-line: line-through;
+        }
+        /*especifica em qual item ele deve começar*/
+        li:nth-child(3n+2) {
+            text-decoration-line: underline;
+        }
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Pseudo-classes</h1>
+
+    <div>
+        <input name="task-01" type="checkbox">
+        <label for="task-01">:nth-child</label>
+    </div>
+    <div>
+        <input name="task-01" type="checkbox">
+        <label for="task-01">:nth-of-type</label>
+    </div>
+    
+    <hr>
+    <article>
+        <!-- <span class"exemplo">Teste</span> -->
+        <!-- <span>Teste 02</span> -->
+        <p class="exemplo">I am the first paragraph.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia molestias nesciunt maxime ratione doloribus autem obcaecati corrupti magni ex nulla error facere exercitationem, commodi beatae illum aspernatur sit! Illum, sequi?</p>
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia culpa soluta ab adipisci. Veniam, architecto minus esse sunt dolore similique culpa ipsum autem consequatur rem ut aliquam, quas id sint.</p>
+        <p class="exemplo">I am the last paragraph.</p>
+    </article>
+
+    <hr>
+
+    <div class="listas">
+        <ul id="lista-1">
+            <li>Item 01</li>
+            <li>Item 02</li>
+            <li>Item 03</li>
+            <li>Item 04</li>
+            <li>Item 05</li>
+            <li>Item 06</li>
+            <li>Item 07</li>
+            <li>Item 08</li>
+            <li>Item 09</li>
+            <li>Item 10</li>
+        </ul>
+        <ul id="lista-2">
+            <li>Categoria 01</li>
+            <li>Categoria 02</li>
+            <li>Categoria 03</li>
+            <li>Categoria 04</li>
+            <li>Categoria 05</li>
+            <li>Categoria 06</li>
+            <li>Categoria 07</li>
+            <li>Categoria 08</li>
+            <li>Categoria 09</li>
+            <li>Categoria 10</li>
+        </ul>
+    </div>
+
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>Descrição</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lorem ipsum</td>
+                <td>R$ 123.40</td>
+            </tr>
+            <tr>
+                <td>Lorem ipsum</td>
+                <td>R$ 70.40</td>
+            </tr>
+            <tr>
+                <td>Lorem ipsum</td>
+                <td>R$ 333.333</td>
+            </tr>
+            <tr>
+                <td>Lorem ipsum</td>
+                <td>R$ 123.40</td>
+            </tr>
+            <tr>
+                <td>Lorem ipsum</td>
+                <td>R$ 70.40</td>
+            </tr>
+            <tr>
+                <td>Lorem ipsum</td>
+                <td>R$ 333.333</td>
+            </tr>
+        </tbody>
+        
+    </table>
+
+    
+</body>
+</html>
