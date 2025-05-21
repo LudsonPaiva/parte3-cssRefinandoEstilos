@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+
+        /*
+        :nth-last-type
+        :nth-last-of-type
+        */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input[type=checkbox]:checked + label {
+            text-decoration: line-through;
+        }
+
+        li:nth-last-child(2) {
+            font-weight: bold;
+            color: purple;
+        }
+
+        li:nth-last-child(2n) {
+            background-color: lightyellow;
+        }
+        li:nth-last-child(-n+2) {
+            font-style: italic;
+        }
+
+        dd:nth-last-of-type(3n) {
+            color: red;
+        }
+
+        dl :nth-last-of-type(1) {
+            background-color: lightgoldenrodyellow;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Pseudo-classes</h1>
+
+    <div>
+        <input name="task-01" type="checkbox">
+        <label for="task-01">:nth-last-type</label>
+    </div>
+    <div>
+        <input name="task-01" type="checkbox">
+        <label for="task-01">:nth-last-of-type</label>
+    </div>
+    
+    <hr>
+    <p>Lista teste</p>
+    <ol reversed>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+    </ol>
+
+    <hr>
+
+    <dl>
+    <dt>Lista 2</dt>
+        <dd>Item 1</dd>
+        <dd>Item 2</dd>
+        <dd>Item 3</dd>
+    <dt>Lista 3</dt>
+        <dd>Item 1</dd>
+        <dd>Item 2</dd>
+        <dd>Item 3</dd>
+        <dd>Item 4</dd>
+    </dl>
+</body>
+</html>

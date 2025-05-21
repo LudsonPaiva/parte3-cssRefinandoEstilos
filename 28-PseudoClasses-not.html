@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+
+        /*
+        :not 
+        */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input[type=checkbox]:checked + label {
+            text-decoration: line-through;
+        }
+
+        .post p:not(.irrelevante){
+            color: red;
+        }
+
+        li:not(:first-child, :last-child) {
+            font-weight: bold;
+        }
+
+        img:not([alt]) {
+            border: 3px solid blue;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h1>Pseudo-classes</h1>
+
+    <div>
+        <input name="task-01" type="checkbox">
+        <label for="task-01">:not</label>
+    </div>
+    
+    <hr>
+
+    <div class="post">
+        <h2>Posts</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea eaque sed perferendis alias adipisci asperiores soluta, eligendi placeat itaque, nam ipsam quo necessitatibus vero doloremque debitis vitae, consequuntur ut doloribus?</p>
+        <p>Lorem <b>ipsum, dolor</b> sit amet consectetur adipisicing elit. Ea eaque sed perferendis alias adipisci asperiores soluta, eligendi placeat itaque, nam ipsam quo necessitatibus vero doloremque debitis vitae, consequuntur ut doloribus?</p>
+        <p>Lorem ipsum, dolor sit <b>amet consectetur</b> adipisicing elit. Ea eaque sed perferendis alias adipisci asperiores soluta, eligendi placeat itaque, nam ipsam quo necessitatibus vero doloremque debitis vitae, consequuntur ut doloribus?</p>
+        <p class="irrelevante">Ignorar esse parágrafo</p>
+    </div>
+    <hr>
+    <ul>
+        <li>Item 01</li>
+        <li>Item 02</li>
+        <li>Item 03</li>
+        <li>Item 04</li>
+        <li>Item 05</li>
+    </ul>
+
+    <hr>
+    <br><br>
+
+    <img width="200" src="assets/image/ImagemDeFundo.jpg" alt="com texto alternativo">
+    <img width="200" src="assets/image/ImagemDeFundo.jpg">
+</body>
+</html>

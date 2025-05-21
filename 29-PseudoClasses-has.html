@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+
+        /*
+        :has 
+        */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input[type=checkbox]:checked + label {
+            text-decoration: line-through;
+        }
+
+        figure {
+            width: 100px;
+            height: 100%;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .gallery figure {
+            box-shadow: 0 0 5px 2px lightgray;
+        }
+
+        figcaption {
+            font-size: 0.75rem;
+        }
+
+        .gallery figure:has(figcaption) {
+            border: 1px solid black;
+            border-radius: 4px;
+            padding: 8px;
+        }
+
+        .gallery figure:not(:has(figcaption)) {
+            border: 2px solid blue;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <h1>Pseudo-classes</h1>
+
+    <div>
+        <input name="task-01" type="checkbox">
+        <label for="task-01">:has</label>
+    </div>
+    
+    <hr>
+
+    <div class="gallery">
+        <figure class="image">
+            <img width="100" src="assets/image/ImagemDeFundo.jpg" alt="com texto alternativo">
+            <figcaption>Legenda da imagem</figcaption>
+        </figure>
+        <figure class="image">
+            <img width="100" src="assets/image/ImagemDeFundo.jpg" alt="com texto alternativo">
+            <figcaption>Legenda da imagem</figcaption>
+        </figure>
+        <figure class="image">
+            <img width="100" src="assets/image/ImagemDeFundo.jpg" alt="com texto alternativo">
+            
+        </figure>
+        <figure class="image">
+            <img width="100" src="assets/image/ImagemDeFundo.jpg" alt="com texto alternativo">
+            
+        </figure>
+        <figure class="image">
+            <img width="100" src="assets/image/ImagemDeFundo.jpg" alt="com texto alternativo">
+            <figcaption>Legenda da imagem</figcaption>
+        </figure>
+    </div>
+
+</body>
+</html>

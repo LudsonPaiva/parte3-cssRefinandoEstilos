@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+
+        /*
+        :first-of-type
+        - Primeiro elemento de um tipo. Considera o tipo da tag
+        :last-of-type
+        */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input[type=checkbox]:checked + label {
+            text-decoration: line-through;
+        }
+
+        article :first-of-type {
+            color: orange;
+        }
+
+        article p:first-of-type {
+            background-color: aqua;
+        }
+
+        article .exemplo:last-of-type {
+            text-decoration: line-through;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Pseudo-classes</h1>
+
+    <div>
+        <input name="task-01" type="checkbox">
+        <label for="task-01">:first-of-type</label>
+    </div>
+    <div>
+        <input name="task-01" type="checkbox">
+        <label for="task-01">:last-of-type</label>
+    </div>
+    
+    <hr>
+    <article class="exemplo">
+        <div class="exemplo">Eu sou uma div</div>
+        <p class="exemplo">Eu sou o primeiro parágrafo</p>
+        <p class="exemplo">Eu sou o segundo parágrafo</p>
+        <p class="exemplo">Eu sou o terceiro parágrafo</p>
+        <p class="exemplo">Eu sou o último parágrafo</p>
+    </article>
+</body>
+</html>
