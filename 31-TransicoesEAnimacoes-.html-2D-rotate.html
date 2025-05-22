@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transições & Animações - 2D</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(247, 247, 247);
+
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            background: linear-gradient(90deg, #FC466b 0%, #3f5efb 100%);
+            width: 200px;
+            height: 200px;
+            border-radius: 8px;
+        }
+
+        .box:hover {
+            /*deg = degrees = graus*/
+            transform: rotate(20deg);
+        }
+        #box2:hover {
+            /*deg = degrees = graus*/
+            transform: rotatex(30deg);
+        }
+        #box3:hover {
+            /*deg = degrees = graus*/
+            transform: rotatey(30deg);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box" id="box2"> Box 2 </div>
+    <div class="box" id="box3"> Box 3 </div>
+</body>
+</html>
