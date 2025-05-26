@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transições & Animações - 2D</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(247, 247, 247);
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            perspective: 300px;
+
+        }
+
+        /* transition: shorthand
+                > transision-delay
+                > transision-duration
+                > transision-property
+                > transision-timing-function
+            */
+
+        .box {   
+            width: 200px;
+            height: 200px;
+            border-radius: 8px;
+            position: absolute;
+            background: #d5336d;
+         
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.4rem;
+            
+            transition: background 1s linear, transform 1.5s ease-in-out 1.5s;
+        }
+        /*
+            transition: <property> <duration> <timing-function> <delay>
+            */
+
+        .box:hover {
+            background-color: rgb(215, 205, 104);
+            transform: rotateX(40deg);
+        }
+
+        
+
+        /*
+        linear
+        ease
+        ease-in
+        ease-out
+        ease-in-out
+        cubic-buzier(n, n, n, n) função personalizada
+        */
+
+        /*EXEMPLO 2*/
+        .exemplo2 {   
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            background: red;
+            transition: width 2s;
+        }
+
+        #div1 {transition-timing-function: linear;}
+        começa devagar, acelera e termina devagar
+        #div2 {transition-timing-function: ease;}
+        lenta no início
+        #div3 {transition-timing-function: ease-in;}
+        lenta no final
+        #div4 {transition-timing-function: ease-out;}
+        velocidade lenta no início e no fim
+        #div5 {transition-timing-function: ease-in-out;}
+
+        .exemplo2:hover {
+            width: 300px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">Hey!</div>
+
+    <br><br><br><br><br><br><br><br><br><hr>
+
+    <h1>The transition-timing-function Property</h1>
+
+    <p>Hover over the div elements below, to see the different speed curves:</p>
+
+    <div class="exemplo2" id="div1">linear</div>
+    <div class="exemplo2" id="div2">ease</div>
+    <div class="exemplo2" id="div3">ease-in</div>
+    <div class="exemplo2" id="div4">ease-out</div>
+    <div class="exemplo2" id="div5">ease-in-out</div>
+
+</body>
+</html>
