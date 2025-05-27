@@ -1,0 +1,2 @@
+crtl + k ctrl + s = ver atalhos do teclado
+ctrl + k ctrl + c = comenta/descomenta várias linhas

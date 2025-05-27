@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transições & Animações - 2D</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(247, 247, 247);
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border-radius: 8px;
+            background: #d53369;
+            animation-name: change-background;
+            animation-duration: 4s;
+            
+            /*valores negativos simulam como a se a animação já estivesse começado*/
+            animation-delay: 2s;
+            /*determina quantas vezes a animação se repetirá
+            infinity = animação não para
+            */
+            animation-iteration-count: 3;
+            /* Direção:
+            normal = pra frente
+            reverse = pra trás
+            alternate
+            alterneta-reverse
+            */
+            animation-duration: alternate;
+            /*
+            ease
+            ease-in
+            ease-out
+            linear
+            */
+            animation-timing-function: linear;
+        }
+
+        @keyframes change-background {
+            0% {
+                background: palegreen;
+                width: 200px;
+                height: 200px;
+            }
+            50%{
+                background: darkblue;
+                width: 500px;
+                height: 400px;
+            }
+            100% {
+                background: purple;
+                width: 100px;
+                height: 200px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
