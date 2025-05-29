@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convenções</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: red;
+        }
+
+        /*HERANÇA
+        - não herda: padding, border
+        - para herdar utilizar inherit
+        */
+        .teste {
+            border: 2px solid blue;
+            padding: 8px;
+        }
+
+        .teste p {
+            border: inherit;
+            padding: inherit;
+        }
+               
+    </style>
+</head>
+<body>
+    <h1>Herança | CSS</h1>
+
+    <div class="teste">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ducimus odio quam cum saepe, odit maxime in reiciendis recusandae ea aliquam quas at rerum dignissimos, ullam aperiam qui? Similique, harum.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ducimus odio quam cum saepe, odit maxime in reiciendis recusandae ea aliquam quas at rerum dignissimos, ullam aperiam qui? Similique, harum.</p>
+    </div>
+</body>
+</html>

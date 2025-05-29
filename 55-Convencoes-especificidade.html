@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transições & Animações - 2D</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            background-color: palegreen;
+        }
+        #conteudo p {
+            background-color: palevioletred;
+        }
+        #conteudo p.texto {
+            background-color: paleturquoise;
+        }
+               
+    </style>
+</head>
+<body>
+    <main id="conteudo">
+        <p style="background-color: blue;" class="texto">Texto 01</p>
+        <p>Texto 02</p>
+    </main>
+
+    <p>Texto 03</p>
+
+    <br><hr><br>
+
+    <h6>Cálculo de especificidade</h6>
+    <ol>
+        <li>Inline: 1000 pontos</li>
+        <li>Id: 100 pontos</li>
+        <li>Classes, pseudo-classes e atributos: 10 pontos</li>
+        <li>Tag HTML: 1 ponto</li>
+    </ol>
+
+    <br><hr><br>
+
+    <ul>
+        <li><b>#exemplo h1.titulo</b> = 111 pontos</li>
+        <li><b>a:hover</b> = 11 pontos</li>
+        <li><b>div p</b> = 2pontos</li>
+    </ul>
+
+</body>
+</html>
