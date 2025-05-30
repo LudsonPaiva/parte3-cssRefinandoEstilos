@@ -1,2 +1,61 @@
+---------------------------------------------------
+ATALHOS:
+---------------------------------------------------
 crtl + k ctrl + s = ver atalhos do teclado
 ctrl + k ctrl + c = comenta/descomenta várias linhas
+
+---------------------------------------------------
+CONVENÇÕES:
+---------------------------
+1) BEM
+[B] Bloco
+[E] Elemento
+[M] Modifier
+
+*"BEM faz alusão a Programação Orientada a Objeto (POO), uma maneira de descrever a realidade no código, com uma variedade de padrões e uma maneira de pensar nas entidades do programa."
+> - Varga Stepanova, desenvolvedora dront-end do projeto.
+
+- Bloco (Block):
+    - Entidade independente (bloco de contrução)
+    - Elemento pai
+    - [BLOCO] (.btn)
+
+- Elemento (Elements)
+    - Elemento filho
+    - Não independente
+    - Vinculado a um bloco
+    - [BLOCO]__[ELEMENTO] (.btn__price)
+
+- Modificador (Modifier)
+    - Modifica um bloco ou Elemento
+    - Variante para alterar a aparência
+        - Variar uma propriedade
+        - Atribuir um estado
+    - [BLOCO]__[ELEMENTO]--[MODIFICADOR]
+        .menu--dark
+        .btn--orange
+        .menu__link--disabled
+
+---------------------------
+2) SMACSS  https://smacss.com/
+[s] Scalable
+[M] Modular
+[A] Architeture for
+[C]
+[S]
+[S]
+
+1. Base
+2. Layout
+3. Module
+4. State
+5. Theme
+
+---------------------------
+3) OOCSS - Object Oriented CSS
+
+- Obter os elementos usados e repetidos dentro da página como um objeto e usá-los quando necessário.
+
+- Estrutura: *width, height, padding, margin, position...*
+
+- Design: *border, color, font, background...*

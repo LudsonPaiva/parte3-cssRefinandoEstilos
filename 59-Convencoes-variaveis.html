@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convenções</title>
+    <style>
+        /*
+        * VARIÁVEIS CSS
+        * Declaração: --nome-da-variavel
+        * Referencia: var(--nome-da-variavel) 
+        */
+
+        /*variável no root: funciona de forma global*/
+        :root {
+            --bg-gradient: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
+            --text-color: red;
+        }
+
+        /*variavel em classes*/
+        .light-theme {
+            --bg-body: rgb(247, 247, 247);
+        }
+
+        .dark-theme {
+            --bg-body: rgb(34, 34, 34);
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--bg-body);
+            text-align: center;
+        }
+
+        h1 {
+            background: var(--bg-gradient);
+            font-size: 5rem;
+            text-align: center;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        
+        a {
+            text-decoration: none;
+            background: var(--bg-gradient);
+            padding: 8px 14px;
+            border-radius: 4px;
+            color: #fafafa;
+        }
+
+        /*aplicando fallback
+        se não houver a variável, applicará outra coisa definida*/
+        p {
+            color: var(--text-color, blue);
+        }
+               
+    </style>
+</head>
+<body class="light-theme">
+    <h1>digital inovation one</h1>
+    <a href="http://dio.me">Me inscrever</a>
+    <p>Olá Mundo</p>
+</body>
+</html>

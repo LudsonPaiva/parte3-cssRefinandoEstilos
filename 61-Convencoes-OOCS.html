@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convenções</title>
+    <style>
+        
+        /* Antes */
+
+        .box-1 {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: #ccc;
+        }
+
+        .box-2 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: #ccc;
+        }
+
+        /* Depois */
+
+        .box-1 {
+            width: 100px;
+            height: 100px;
+        }
+
+        .box-2 {
+            width: 200px;
+            height: 200px;
+        }
+
+        .box-border {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: #ccc;
+        }
+        
+        /*Independência dos containers e dos conteúdos: estilos em módulos a serem utilizados*/
+
+        /* Antes */
+        #sidebar {
+            padding: 2px;
+            left: 0;
+            margin: 3px;
+            position: absolute;
+            width: 140px;
+        }
+
+        #sidebar .list {
+            margin: 3px;
+        }
+
+        #sidebar .list .list_header {
+            font-size: 16px;
+            color: red;
+        }
+
+        #sidebar .list .list_body {
+            font-size: 12px;
+            color: #FFF;
+            background-color: red;
+        }
+
+        /* Depois: não atrela a id e sim a classes (não é recomendado a projetos pequenos) */
+        .sidebar {
+            padding: 2px;
+            left: 0;
+            margin: 3px;
+            position: absolute;
+            width: 140px;
+        }
+
+        .list {
+            margin: 3px;
+        }
+
+        .list_header {
+            font-size: 16px;
+            color: red;
+        }
+
+        .list_body {
+            font-size: 12px;
+            color: #FFF;
+            background-color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+
+</body>
+</html>
